@@ -1,8 +1,8 @@
 import { expect, test } from 'vitest'
 
-import type { Answer } from '../entities/answer'
-import type { AnswersRepository } from '../repositories/answers-repository'
-import { AnswerQuestionUseCase } from './answer-question'
+import type { AnswersRepository } from '@/domain/forum/application/repositories/answers-repository'
+import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question'
+import type { Answer } from '@/domain/forum/enterprise/entities/answer'
 
 const fakeAnswersRepository: AnswersRepository = {
   // eslint-disable-next-line
