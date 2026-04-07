@@ -46,6 +46,17 @@ export default defineConfig([
       'simple-import-sort/exports': 'warn', // turn export sort to warn
 
       'prettier/prettier': 'warn', // turn prettier error in warning
+
+      'no-unused-vars': 'off', // desable error of no used variables
+
+      '@typescript-eslint/no-unused-vars': [
+        // set a role to ignores the no used vars in case of first letter '_'
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
     },
   },
   tseslint.configs.recommended,

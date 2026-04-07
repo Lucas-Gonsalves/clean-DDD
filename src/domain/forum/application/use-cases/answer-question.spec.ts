@@ -5,10 +5,7 @@ import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answ
 import type { Answer } from '@/domain/forum/enterprise/entities/answer'
 
 const fakeAnswersRepository: AnswersRepository = {
-  // eslint-disable-next-line
-  create: async (_answer: Answer): Promise<void> => {
-    return
-  },
+  create: async (_answer: Answer) => {},
 }
 
 test('create an answer', async () => {
