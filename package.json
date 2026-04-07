@@ -1,0 +1,30 @@
+{
+  "name": "clean-ddd",
+  "version": "1.0.0",
+  "description": "Project developed to learn about DDD (Domain-Driven Design).",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-Gonsalves/clean-DDD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Lucas-Gonsalves/clean-DDD/issues"
+  },
+  "homepage": "https://github.com/Lucas-Gonsalves/clean-DDD#readme",
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.20"
+  }
+}
