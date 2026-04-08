@@ -57,6 +57,7 @@ export default defineConfig([
           varsIgnorePattern: '^_',
         },
       ],
+      '@typescript-eslint/no-empty-object-type': ['warn', { allowInterfaces: 'always' }],
     },
   },
   tseslint.configs.recommended,
