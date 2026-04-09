@@ -1,4 +1,4 @@
-import type { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import type { Optional } from '@/core/types/optional'
 
 import { Comment, type CommentProps } from './comment'
@@ -20,6 +20,7 @@ export class AnswerComment extends Comment<AnswerCommentProps> {
       },
       id,
     )
+
     return answerComment
   }
 }
