@@ -9,13 +9,13 @@ import { FetchQuestionAnswersUseCase } from './fetch-question-answers'
 let inMemoryAnswersRepository: InMemoryAnswersRepository
 let sut: FetchQuestionAnswersUseCase
 
-describe('Fetch Fetch Question answers', () => {
+describe('Fetch Question answers', () => {
   beforeEach(() => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository()
     sut = new FetchQuestionAnswersUseCase(inMemoryAnswersRepository)
   })
 
-  it('should be able to fetch fetch question answers', async () => {
+  it('should be able to fetch question answers', async () => {
     await inMemoryAnswersRepository.create(
       makeAnswer({
         questionId: new UniqueEntityId('question-1'),
