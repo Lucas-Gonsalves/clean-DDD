@@ -42,15 +42,14 @@ describe('Edit Question', () => {
 
     await inMemoryQuestionsRepository.create(newQuestion)
 
-    await expect(() =>
-      sut.execute({
-        questionId: newQuestion.id.toString(),
-        authorId: 'author-2',
-        title: 'Answer updated title',
-        content: 'Answer updated content',
-      }),
-    ).rejects.toBeInstanceOf(Error)
+    const result = await sut.execute({
+      questionId: newQuestion.id.toString(),
+      authorId: 'author-2',
+      title: 'Answer updated title',
+      content: 'Answer updated content',
+    })
 
+    expect(result.isLeft()).toBe(true)
     expect(inMemoryQuestionsRepository.items[0]).toMatchObject({
       title: newQuestion.title,
       content: newQuestion.content,
