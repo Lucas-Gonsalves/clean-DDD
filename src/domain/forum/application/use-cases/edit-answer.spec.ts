@@ -40,13 +40,13 @@ describe('Edit Answer', () => {
 
     await inMemoryAnswersRepository.create(newAnswer)
 
-    await expect(() =>
-      sut.execute({
-        answerId: newAnswer.id.toString(),
-        authorId: 'author-2',
-        content: 'Answer updated content',
-      }),
-    ).rejects.toBeInstanceOf(Error)
+    const result = await sut.execute({
+      answerId: newAnswer.id.toString(),
+      authorId: 'author-2',
+      content: 'Answer updated content',
+    })
+
+    expect(result.isLeft()).toBe(true)
 
     expect(inMemoryAnswersRepository.items[0]).toMatchObject({
       content: newAnswer.content,

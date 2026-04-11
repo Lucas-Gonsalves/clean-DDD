@@ -54,6 +54,7 @@ describe('Fetch Answer Comment', () => {
       page: 2,
     })
 
+    expect(result.isRight()).toBe(true)
     expect(result.value?.answerComments).toHaveLength(2)
   })
 })
