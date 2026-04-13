@@ -4,6 +4,14 @@ import type { QuestionAttachment } from '@/domain/forum/enterprise/entities/ques
 export class InMemoryQuestionsAttachmentsRepository implements QuestionsAttachmentsRepository {
   public items: QuestionAttachment[] = []
 
+  async deleteManyByQuestionId(questionId: string) {
+    const questionAttachments = this.items.filter(
+      (attachment) => attachment.questionId.toString() !== questionId,
+    )
+
+    this.items = questionAttachments
+  }
+
   async findManyByQuestionId(questionId: string) {
     const questionAttachments = this.items.filter(
       (item) => item.questionId.toString() === questionId,
