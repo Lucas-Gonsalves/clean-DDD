@@ -1,9 +1,9 @@
 import { makeAnswer } from 'test/factories/make-answer'
 import { makeQuestion } from 'test/factories/make-question'
-import { InMemoryAnswersAttachmentsRepository } from 'test/repositories/in-memory-answers-attachments-repository'
-import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
-import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/in-memory-question-attachments-repository'
-import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
+import { InMemoryAnswersAttachmentsRepository } from 'test/repositories/forum/in-memory-answers-attachments-repository'
+import { InMemoryAnswersRepository } from 'test/repositories/forum/in-memory-answers-repository'
+import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/forum/in-memory-question-attachments-repository'
+import { InMemoryQuestionsRepository } from 'test/repositories/forum/in-memory-questions-repository'
 import { beforeEach, describe, expect, it } from 'vitest'
 
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'

@@ -1,5 +1,5 @@
 import { makeAnswerComment } from 'test/factories/make-answer-comment'
-import { InMemoryAnswerCommentsRepository } from 'test/repositories/in-memory-answer-comments-repository'
+import { InMemoryAnswerCommentsRepository } from 'test/repositories/forum/in-memory-answer-comments-repository'
 import { beforeEach, describe, expect, it } from 'vitest'
 
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
