@@ -16,7 +16,10 @@ export default defineConfig([
     'prisma.config.ts',
     'generated/**',
   ]),
+
   prettier,
+
+  tseslint.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs,ts,cts}'],
     plugins: {
@@ -64,7 +67,8 @@ export default defineConfig([
           allowObjectTypes: 'always',
         },
       ],
+
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
-  tseslint.configs.recommended,
 ])
