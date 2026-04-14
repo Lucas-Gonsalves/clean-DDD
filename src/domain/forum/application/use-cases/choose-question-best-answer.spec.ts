@@ -1,5 +1,5 @@
-import { makeAnswer } from 'test/factories/make-answer'
-import { makeQuestion } from 'test/factories/make-question'
+import { makeAnswer } from 'test/factories/forum/make-answer'
+import { makeQuestion } from 'test/factories/forum/make-question'
 import { InMemoryAnswersAttachmentsRepository } from 'test/repositories/forum/in-memory-answers-attachments-repository'
 import { InMemoryAnswersRepository } from 'test/repositories/forum/in-memory-answers-repository'
 import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/forum/in-memory-question-attachments-repository'
@@ -7,9 +7,8 @@ import { InMemoryQuestionsRepository } from 'test/repositories/forum/in-memory-q
 import { beforeEach, describe, expect, it } from 'vitest'
 
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { NotAllowedError } from '@/core/errors/domain/not-allowed-error'
 import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-cases/choose-question-best-answer'
-
-import { NotAllowedError } from './errors/not-allowed-error'
 
 let inMemoryAnswersAttachmentsRepository: InMemoryAnswersAttachmentsRepository
 let inMemoryQuestionsAttachmentsRepository: InMemoryQuestionsAttachmentsRepository

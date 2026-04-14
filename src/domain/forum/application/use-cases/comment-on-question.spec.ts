@@ -1,4 +1,4 @@
-import { makeQuestion } from 'test/factories/make-question'
+import { makeQuestion } from 'test/factories/forum/make-question'
 import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/forum/in-memory-question-attachments-repository'
 import { InMemoryQuestionCommentsRepository } from 'test/repositories/forum/in-memory-question-comments-repository'
 import { InMemoryQuestionsRepository } from 'test/repositories/forum/in-memory-questions-repository'

@@ -1,4 +1,4 @@
-import { makeQuestionComment } from 'test/factories/make-question-comment'
+import { makeQuestionComment } from 'test/factories/forum/make-question-comment'
 import { InMemoryQuestionCommentsRepository } from 'test/repositories/forum/in-memory-question-comments-repository'
 import { beforeEach, describe, expect, it } from 'vitest'
 

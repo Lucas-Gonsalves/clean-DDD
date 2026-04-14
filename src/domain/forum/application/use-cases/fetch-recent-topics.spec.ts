@@ -1,4 +1,4 @@
-import { makeQuestion } from 'test/factories/make-question'
+import { makeQuestion } from 'test/factories/forum/make-question'
 import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/forum/in-memory-question-attachments-repository'
 import { InMemoryQuestionsRepository } from 'test/repositories/forum/in-memory-questions-repository'
 import { beforeEach, describe, expect, it } from 'vitest'

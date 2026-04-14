@@ -1,11 +1,11 @@
-import { makeAnswerComment } from 'test/factories/make-answer-comment'
+import { makeAnswerComment } from 'test/factories/forum/make-answer-comment'
 import { InMemoryAnswerCommentsRepository } from 'test/repositories/forum/in-memory-answer-comments-repository'
 import { beforeEach, describe, expect, it } from 'vitest'
 
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { NotAllowedError } from '@/core/errors/domain/not-allowed-error'
 
 import { DeleteAnswerCommentUseCase } from './delete-answer-comment'
-import { NotAllowedError } from './errors/not-allowed-error'
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentsRepository
 let sut: DeleteAnswerCommentUseCase

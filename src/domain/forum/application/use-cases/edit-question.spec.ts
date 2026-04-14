@@ -1,5 +1,5 @@
-import { makeQuestion } from 'test/factories/make-question'
-import { makeQuestionAttachment } from 'test/factories/make-question-attachment'
+import { makeQuestion } from 'test/factories/forum/make-question'
+import { makeQuestionAttachment } from 'test/factories/forum/make-question-attachment'
 import { InMemoryQuestionsAttachmentsRepository } from 'test/repositories/forum/in-memory-question-attachments-repository'
 import { InMemoryQuestionsRepository } from 'test/repositories/forum/in-memory-questions-repository'
 import { beforeEach, describe, expect, it } from 'vitest'
