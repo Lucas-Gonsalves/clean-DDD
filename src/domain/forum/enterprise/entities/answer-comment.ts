@@ -1,6 +1,7 @@
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import type { Optional } from '@/core/types/optional'
 
+import { AnswerCommentEvent } from '../events/answer-comment-event'
 import { Comment, type CommentProps } from './comment'
 
 export interface AnswerCommentProps extends CommentProps {
@@ -20,6 +21,12 @@ export class AnswerComment extends Comment<AnswerCommentProps> {
       },
       id,
     )
+
+    const isNewAnswerComment = !id
+
+    if (!isNewAnswerComment) {
+      answerComment.addDomainEvent(new AnswerCommentEvent(answerComment))
+    }
 
     return answerComment
   }
